@@ -1,0 +1,50 @@
+<html>
+<head>
+	<!-- A single-page home automation map, using JQuery -->
+	
+	<!-- JQuery, loaded from a CDN -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	
+	<!-- this is the file with info (including JS functions) for the various data types supported by the system. -->
+	<!-- to add a feature type, either modify this file or use JS to add an object to JADATA.dataTypes -->
+	<script src="js/data-types.js"></script>
+	
+	<!-- this is the JS file that does the home automation -->
+	<script src="js/home-setup.js"></script>
+	
+	<!-- custom fonts defined here, using google just because it's free -->
+	<link href="http://fonts.googleapis.com/css?family=Parisienne|Lora" rel="stylesheet" type="text/css">
+	
+	<!-- CSS Styling, mostly formatting the control panel -->
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	
+</head>
+<body>
+    <div id="content">
+		
+        <h1>Just Another Automated Home</h1>
+        
+		<div id="control-panel">
+            <h2>Control Panel</h2>
+			
+			<!-- this container will be filled with the home automation controls -->
+            <div id="control-panel-content"></div>
+        </div>
+		
+		<!-- this is the SVG floor plan for the home to be animated & automated -->
+		<!-- To use a different home, you'll need to change 2 things: this SVG & the JSON file, data/home-object.json -->
+        <object type="image/svg+xml" data="media/floor-plan.svg" class="home-map" id="home-map">Your browser does not support SVG</object>
+		
+        <script>
+			var homeID = 'home',
+				featureTypeID = 'feature-types',
+				containerID = 'control-panel-content';
+			
+			// set up the home data from the JSON object
+            JAHOME.initHomeData("data/home-object.json", JADATA.dataTypes, homeID, featureTypeID, containerID);
+			
+        </script>
+		
+    </div>
+</body>
+</html>
