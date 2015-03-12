@@ -1,5 +1,6 @@
 <h1>Just-Another-Automated-Home</h1>
 <p>A home automation app & GUI by Mary Shaw</p>
+<p><a href="http://marybeshaw.github.io/Just-Another-Automated-Home/">Link to working demo on GitHub</a></p>
 <p>I built this home automation project for an interview at Adobe Systems.  The goal was to create an extensible home automation app with visual effects, using a static page, jQuery, and some basic asynchronous server interaction.</p>
 <p>I looked at some examples online, but in the end I chose to build my own from scratch.  My app is set up to support any SVG, with its accompanying JSON describing the home, its rooms, & its automated features.</p>
 <h2>The Official Requirements</h2>
